@@ -1,0 +1,30 @@
+variable_name,data_type,description,allowed_values_or_range,use_in_model
+employee_id,Integer,Unique identifier for each employee.,10000–29999,Identifier (exclude from model)
+age,Integer,Age of the employee in years.,18–60,Feature
+gender,Categorical,"Gender of the employee.",Male / Female,Feature (encode)
+marital_status,Categorical,Marital status.,Single / Married / Divorced,Feature (encode)
+education,Ordinal,Education level coded numerically.,1=Below College 2=College 3=Bachelor 4=Master 5=Doctorate,Feature
+education_field,Categorical,Field of education.,Life Sciences / Medical / Marketing / Technical Degree / HR / Other,Feature (encode)
+department,Categorical,Department within the organization.,Sales / R&D / HR / Finance / Marketing / Operations,Feature (encode)
+job_role,Categorical,Specific job title.,e.g. Sales Executive Research Scientist,Feature (encode)
+job_level,Ordinal,Job level in the organization.,1–5,Feature
+business_travel,Categorical,Frequency of business travel.,Travel_Rarely / Travel_Frequently / Non-Travel,Feature (encode)
+distance_from_home_km,Integer,Distance from home to office in kilometers.,1–29,Feature
+num_companies_worked,Integer,Number of previous employers.,0–9,Feature
+years_at_company,Integer,Total years with the current company.,0–40,Feature
+years_in_current_role,Integer,Years in the current job role.,0–40,Feature
+years_since_last_promotion,Integer,Years since last promotion.,0–15,Feature
+years_with_current_manager,Integer,Years with current manager.,0–17,Feature
+monthly_income_usd,Integer,Monthly salary in USD.,1500–20000,Feature or target (regression)
+stock_option_level,Ordinal,Level of stock options.,0–3,Feature
+num_projects_last_year,Integer,Number of projects in the last year.,2–7,Feature
+training_times_last_year,Integer,Number of training sessions attended.,0–6,Feature
+environment_satisfaction,Ordinal,Rating of work environment.,1=Low to 4=High,Feature
+job_satisfaction,Ordinal,Rating of job satisfaction.,1=Low to 4=High,Feature
+work_life_balance,Ordinal,Rating of work-life balance.,1=Low to 4=High,Feature
+job_involvement,Ordinal,Rating of job involvement.,1=Low to 4=High,Feature
+relationship_satisfaction,Ordinal,Rating of relationship with colleagues.,1=Low to 4=High,Feature
+performance_rating,Ordinal,Company performance rating.,3=Good 4=Excellent,Feature
+overtime,Categorical,Whether employee works overtime.,Yes / No,Feature (encode)
+attrition,Binary,Whether employee left the company.,Yes / No,Target (classification)
+join_date,Date,Date of joining the company.,YYYY-MM-DD,Derive tenure (optional)
